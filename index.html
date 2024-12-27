@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Search Interface And Recommendation & Assistance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="images/hero-image.jpg" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Welcome to AI Search Interface</h1>
+            <p>Your one-stop solution for personalized recommendations and assistance. Explore movies, books, fashion, and medical advice tailored just for you.</p>
+            
+        </div>
+    </div>
+    
+
+    <!-- Main Content -->
+
+    
+
+
+    <div class="container">
+        <h1>Choose a Service</h1>
+        <div class="button-container">
+            <button class="button" onclick="openPopup('movie-popup')">Movie Recommendation</button>
+            <button class="button" onclick="openPopup('book-popup')">Book Recommendation</button>
+            <button class="button" onclick="openPopup('clothing-popup')">Clothing Suggestion</button>
+            <button class="button" onclick="openPopup('medical-popup')">Medical Assistance</button>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div id="overlay" class="overlay"></div>
+    <div id="movie-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h3>Movie Recommendation</h3>
+        <form id="movie-form">
+            <input type="text" id="movie-style" placeholder="Style">
+            <input type="text" id="movie-topic" placeholder="Topic">
+            <button type="button" onclick="submitMovie()">Submit</button>
+        </form>
+        <div id="movie-result" class="result"></div>
+    </div>
+
+    <div id="book-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h3>Book Recommendation</h3>
+        <form id="book-form">
+            <input type="text" id="book-genre" placeholder="Genre">
+            <input type="text" id="book-style" placeholder="Style">
+            <input type="text" id="book-author" placeholder="Author">
+            <input type="text" id="book-length" placeholder="Length">
+            <input type="text" id="book-previous" placeholder="Previous Book">
+            <button type="button" onclick="submitBook()">Submit</button>
+        </form>
+        <div id="book-result" class="result"></div>
+    </div>
+
+    <div id="clothing-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h3>Clothing Suggestion</h3>
+        <form id="clothing-form">
+            <input type="number" id="clothing-age" placeholder="Age">
+            <input type="text" id="clothing-height" placeholder="Height">
+            <input type="text" id="clothing-skin" placeholder="Skin Tone">
+            <input type="text" id="clothing-color" placeholder="Color Preferences">
+            <button type="button" onclick="submitClothing()">Submit</button>
+        </form>
+        <div id="clothing-result" class="result"></div>
+    </div>
+
+    <div id="medical-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <h3>Medical Assistance</h3>
+        <form id="medical-form">
+            <input type="text" id="medical-location" placeholder="Location">
+            <input type="text" id="medical-symptoms" placeholder="Symptoms">
+            <button type="button" onclick="submitMedical()">Submit</button>
+        </form>
+        <div id="medical-result" class="result"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Search Interface. Designed by [Your Name].</p>
+        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
